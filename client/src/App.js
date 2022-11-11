@@ -60,13 +60,13 @@ class App extends React.Component {
   render() {
     return (
       <div className='App'>
-        {/* <actionCable 
+        <actionCable 
           channel={{ channel: 'MessagesChannel' }}
           onReceived={this.handleReceivedMessages}
-        /> */}
+        />
         <h2>Messages</h2>
         <ul>{this.mapMessages()}</ul>
-        <form>
+        <form onSubmit={(e)=>this.handleMessageSubmit(e)}>
           <input name='message' type='text' />
           <input type='submit' value='Send message' />
         </form>

@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
 
     def index 
         messages = Message.all
-        render json: message
+        render json: messages
     end 
 
     def create 
@@ -15,7 +15,8 @@ class MessagesController < ApplicationController
        end    
     end
     private
-    def 
+    def message_params
         params.require(:message).permit(:content)
     end
 end
+1
